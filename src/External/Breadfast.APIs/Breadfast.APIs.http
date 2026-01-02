@@ -1,0 +1,6 @@
+@Breadfast.APIs_HostAddress = http://localhost:5137
+
+GET {{Breadfast.APIs_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

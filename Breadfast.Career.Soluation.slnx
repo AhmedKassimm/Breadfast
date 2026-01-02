@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Core/">
+    <Project Path="src/core/Breadfast.Application/Breadfast.Application.csproj" Id="d6c2b6a3-bee4-446c-ad6c-16736c67466d" />
+    <Project Path="src/Core/Breadfast.Domain/Breadfast.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/External/">
+    <Project Path="src/External/Breadfast.APIs/Breadfast.APIs.csproj" Id="0ff4bbf6-dc6c-4bf9-b5fe-380c96fae50d" />
+    <Project Path="src/External/Breadfast.Infrastructure/Breadfast.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/test/" />
+</Solution>
