@@ -9,8 +9,8 @@ namespace Breadfast.Domain.Enums
     public enum SortingOptions
     {
 
-        NameAsc,
-        PriceAsc,
-        PricesDesc,
+        NameAsc = 0,
+        PriceAsc = 1 ,
+        PriceDesc = 2
     }
 }

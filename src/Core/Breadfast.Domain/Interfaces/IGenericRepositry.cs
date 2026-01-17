@@ -11,9 +11,8 @@ namespace Breadfast.Domain.Interfaces
     {
         Task<IEnumerable<T>> GetAll();
         Task<T?> GetById(int id);
-
         Task<IEnumerable<T>> GetAllWithSpec(ISpecification<T> spec);
-        Task<T?>GetWithSpec(ISpecification<T> spec);
+        Task<T?> GetWithSpec(ISpecification<T> spec);
 
     }
 }

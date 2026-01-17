@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Breadfast.APIs.Dtos.ProductsDtos
+namespace Breadfast.Application.Dtos.ProductsDtos
 {
     public class ProductToReturnDto
     {

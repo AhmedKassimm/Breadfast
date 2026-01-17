@@ -6,7 +6,7 @@ namespace Breadfast.APIs.Controllers
 {
     [Route("errors/{code}")]
     [ApiController]
-    [ApiExplorerSettings( IgnoreApi =true)]
+    [ApiExplorerSettings(IgnoreApi =true)]
     public class ErrorController : ControllerBase
     {
 

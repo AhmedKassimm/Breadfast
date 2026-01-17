@@ -1,5 +1,4 @@
-﻿using Breadfast.APIs.Dtos.ProductsDtos;
-using Breadfast.APIs.Errors;
+﻿using Breadfast.APIs.Errors;
 using Breadfast.Domain.Entities.Products;
 using Breadfast.Infrastructure.Persistence.Data.Database;
 using Microsoft.AspNetCore.Authorization;

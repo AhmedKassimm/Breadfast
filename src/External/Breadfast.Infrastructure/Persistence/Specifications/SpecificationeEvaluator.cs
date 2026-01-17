@@ -22,7 +22,16 @@ namespace Breadfast.Infrastructure.Persistence.Specifications
             {
               query = query.Where(spec.Criteria);
             }
-
+            spec.Total = query.Count();    
+            if (spec.OrderBy is not null)
+            {
+                query = query.OrderBy(spec.OrderBy);
+            }
+            else if(spec.OrderByDescending is not null)
+            {
+                query = query.OrderByDescending(spec.OrderByDescending);
+            }
+            query = query.Skip(spec.Skip).Take(spec.Take);  
             query = spec.Includes.Aggregate(query, (currentquery, includesExpression) => currentquery.Include(includesExpression));
 
             return query;

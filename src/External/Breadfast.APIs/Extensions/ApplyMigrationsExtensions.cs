@@ -1,5 +1,8 @@
-﻿using Breadfast.Infrastructure.Persistence.Data.Database;
+﻿using Breadfast.Domain.Entities.User;
+using Breadfast.Infrastructure.Persistence.Data.Database;
 using Breadfast.Infrastructure.Persistence.Data.Seeding;
+using Breadfast.Infrastructure.Persistence.Identity.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Breadfast.APIs.Extensions
@@ -13,13 +16,18 @@ namespace Breadfast.APIs.Extensions
             using var scope = app.Services.CreateScope();
             var service = scope.ServiceProvider;
             var dbContext = service.GetRequiredService<BreadfastDbContext>();
+            var identiydbContext = service.GetRequiredService<ApplicationIdentityDbContext>();
             var loggerFactory =  service.GetRequiredService<ILoggerFactory>();
 
             try
             {
-            await  dbContext.Database.MigrateAsync(); 
-            await BreadfastDbContextSeed.SeedAsync(dbContext);
+                await dbContext.Database.MigrateAsync();
+                await BreadfastDbContextSeed.SeedAsync(dbContext);
 
+
+                var _userManager = service.GetRequiredService<UserManager<ApplcationUser>>();   
+                await identiydbContext.Database.MigrateAsync();
+                await ApplicationDbContextUserSeeding.SeedUserAsync(_userManager);
             }
             catch (Exception ex)
             {

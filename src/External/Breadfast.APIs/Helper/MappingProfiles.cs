@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Breadfast.APIs.Dtos.ProductsDtos;
+using Breadfast.Application.Dtos.ProductsDtos;
 using Breadfast.Domain.Entities.Products;
 using Microsoft.AspNetCore.Mvc;
 
